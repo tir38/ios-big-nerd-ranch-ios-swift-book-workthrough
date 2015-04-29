@@ -1,2 +1,9 @@
-# big-nerd-ranch-ios-swift-book-workthrough
-Personal work through of the switf / iOS8 book
+#Personal Workthrough of the Big Nerd Ranch iOS / Swift book
+-----
+
+
+Contents:
+----
+
+- Playground: ch 2
+
