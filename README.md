@@ -6,5 +6,6 @@
 Contents:
 ----
 
-- Playground: ch 2
+- *Playground* - chapter 2
+- *ch3 playrground*	 - chapter 3
 
