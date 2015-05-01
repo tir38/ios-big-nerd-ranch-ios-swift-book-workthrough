@@ -8,4 +8,5 @@ Contents:
 
 - *Playground* - chapter 2
 - *ch3 playrground*	 - chapter 3
+- *ch4 conditionals* - chapter 4
 
