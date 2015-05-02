@@ -6,10 +6,12 @@
 Contents:
 ----
 
+Swift Book:
+
 - *Playground* - chapter 2
 - *ch3 types constants and variables*	 - chapter 3
 - *ch4 conditionals* - chapter 4
 - *ch5 numbers* - chapter 5	
 - *ch6 switch* - chapter 6
 - *ch7 loops* - chapter 7
-
+- *ch11 dictionaries* - chapter 11
