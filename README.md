@@ -19,3 +19,4 @@ Swift Book:
 - *ch10 arrays* - chapter 10
 - *ch11 dictionaries* - chapter 11
 - *ch12 functions* - chapter 12
+- *monstertown* - chapter 15
