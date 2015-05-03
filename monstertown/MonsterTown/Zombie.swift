@@ -4,12 +4,18 @@ import Foundation
 class Zombie: Monster {
     var walksWithLimp = true
     
+    private(set) var isFallingApart = false
+    
     override func terrorizeTown() {
         super.terrorizeTown()
         
         var curPop = town?.population ?? 0
         
         if (curPop <= 0) {
+            return
+        }
+        
+        if (isFallingApart) {
             return
         }
         

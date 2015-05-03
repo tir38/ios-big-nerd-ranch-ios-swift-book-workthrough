@@ -2,8 +2,16 @@
 
 var myTown = Town()
 myTown.printDescription()
+myTown.changePopulation(15)
+
+// play with town size
+var ts = myTown.townSize
+println(ts.rawValue)
+
 myTown.changePopulation(50)
 myTown.printDescription()
+ts = myTown.townSize
+println(ts.rawValue)
 
 // create generic monster
 let genericMonster = Monster()
@@ -18,6 +26,8 @@ fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 fredTheZombie.changeName("Fred", walksWithLimp: true)
 fredTheZombie.terrorizeTown()
+println(Zombie.spookyNoises)
+fredTheZombie.isFallingApart
 
 // terrorize until it can't terrorize any more
 fredTheZombie.terrorizeTown()
@@ -34,7 +44,6 @@ fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
-
 
 let zombie1 = Zombie()
 zombie1.walksWithLimp = false
