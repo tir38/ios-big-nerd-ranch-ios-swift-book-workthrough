@@ -10,6 +10,7 @@
 		9602B6F01AF663C3008C1FC3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B6EF1AF663C3008C1FC3 /* main.swift */; };
 		9602B6F71AF6647F008C1FC3 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B6F61AF6647F008C1FC3 /* Town.swift */; };
 		9602B6F91AF667B2008C1FC3 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602B6F81AF667B2008C1FC3 /* Monster.swift */; };
+		961810D01AF6A07A00BF48AD /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961810CF1AF6A07A00BF48AD /* Vampire.swift */; };
 		96563D3C1AF67CCD006F42ED /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96563D3B1AF67CCD006F42ED /* Zombie.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		9602B6EF1AF663C3008C1FC3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9602B6F61AF6647F008C1FC3 /* Town.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		9602B6F81AF667B2008C1FC3 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		961810CF1AF6A07A00BF48AD /* Vampire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vampire.swift; sourceTree = "<group>"; };
 		96563D3B1AF67CCD006F42ED /* Zombie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				9602B6F61AF6647F008C1FC3 /* Town.swift */,
 				9602B6F81AF667B2008C1FC3 /* Monster.swift */,
 				96563D3B1AF67CCD006F42ED /* Zombie.swift */,
+				961810CF1AF6A07A00BF48AD /* Vampire.swift */,
 			);
 			path = MonsterTown;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 				9602B6F01AF663C3008C1FC3 /* main.swift in Sources */,
 				9602B6F91AF667B2008C1FC3 /* Monster.swift in Sources */,
 				96563D3C1AF67CCD006F42ED /* Zombie.swift in Sources */,
+				961810D01AF6A07A00BF48AD /* Vampire.swift in Sources */,
 				9602B6F71AF6647F008C1FC3 /* Town.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

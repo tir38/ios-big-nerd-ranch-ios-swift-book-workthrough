@@ -44,3 +44,38 @@ println("Zombie 1 walks with a limp? \(zombie1.walksWithLimp)")
 println("Zombie 2 walks with a limp? \(zombie2.walksWithLimp)")
 
 
+// create vampire
+let bobTheVampire = Vampire()
+bobTheVampire.name = "Bob"
+myTown.changePopulation(-40)
+bobTheVampire.town = myTown
+
+// terrorize until everyone is a vampire
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
+bobTheVampire.terrorizeTown()
+bobTheVampire.town?.printDescription()
