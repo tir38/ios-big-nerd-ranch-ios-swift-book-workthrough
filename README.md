@@ -13,4 +13,4 @@ Contents:
 - *ch6 switch* - chapter 6
 - *ch7 loops* - chapter 7
 - *ch8 strings* - chapter 8
-
+- *ch10 arrays* - chapter 10
