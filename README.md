@@ -15,3 +15,4 @@ Swift Book:
 - *ch6 switch* - chapter 6
 - *ch7 loops* - chapter 7
 - *ch11 dictionaries* - chapter 11
+- *ch12 functions* - chapter 12
