@@ -7,7 +7,9 @@ struct Town {
     
     var population: Int = 1 {
         didSet(oldPopulation) {
-            println("The population has changed from \(oldPopulation) to \(population)")
+            if oldPopulation > population {
+                println("The population just dropped from \(oldPopulation) to \(population)!!!!")
+            }
         }
     }
     
