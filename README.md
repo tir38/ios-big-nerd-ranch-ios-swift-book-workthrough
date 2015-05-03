@@ -12,4 +12,4 @@ Contents:
 - *ch5 numbers* - chapter 5	
 - *ch6 switch* - chapter 6
 - *ch7 loops* - chapter 7
-
+- *ch9 optionals* - chapter 9
