@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Quiz
-//
-//  Created by Jason Atwood on 5/4/15.
-//  Copyright (c) 2015 Jason Atwood. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -15,7 +7,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let screenSizeRect = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: screenSizeRect)
+        
+        let quizVC = QuizViewController(nibName: "QuizViewController", bundle: nil)
+        window?.rootViewController = quizVC
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
