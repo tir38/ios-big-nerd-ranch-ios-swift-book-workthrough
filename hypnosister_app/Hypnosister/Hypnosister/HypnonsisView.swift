@@ -21,6 +21,8 @@ class HypnonsisView: UIView {
     private var distanceBtwnCircles: CGFloat = 20
     private var circleLineThickness: CGFloat = 10
     private var smallsetCircleColorIndex: Int = 0
+    private var centralImage: UIImage? = UIImage(named: "bill_up_close.png")
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,5 +93,13 @@ class HypnonsisView: UIView {
             currentIndex++
             currentIndex = (currentIndex % colors.count)
         }
+        
+        // set central image
+        let imageSize: CGFloat = 200
+        let centralImageOriginX = bounds.midX - (imageSize/2)
+        let centalImageOriginY = bounds.midY - (imageSize/2)
+        let centralImageRect = CGRect(x: centralImageOriginX, y: centalImageOriginY, width: imageSize, height: imageSize)
+        
+        centralImage?.drawInRect(centralImageRect)
     }
 }

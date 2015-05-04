@@ -12,6 +12,7 @@
 		969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */; };
 		969E08091AF7CE40002EDB8D /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */; };
 		969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */; };
+		969E08171AF801AE002EDB8D /* bill_up_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 969E08161AF801AE002EDB8D /* bill_up_close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		969E08071AF7CE40002EDB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
 		969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnonsisView.swift; sourceTree = "<group>"; };
+		969E08161AF801AE002EDB8D /* bill_up_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bill_up_close.png; path = images/bill_up_close.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		969E07EF1AF7CE40002EDB8D /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				969E08161AF801AE002EDB8D /* bill_up_close.png */,
 				969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */,
 				969E07F21AF7CE40002EDB8D /* AppDelegate.swift */,
 				969E07F91AF7CE40002EDB8D /* Images.xcassets */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969E08171AF801AE002EDB8D /* bill_up_close.png in Resources */,
 				969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */,
 				969E07FA1AF7CE40002EDB8D /* Images.xcassets in Resources */,
 			);
