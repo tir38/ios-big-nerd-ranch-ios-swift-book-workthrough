@@ -7,9 +7,8 @@ struct Town {
     
     var population: Int = 1 {
         didSet(oldPopulation) {
-            if oldPopulation > population {
-                println("The population just dropped from \(oldPopulation) to \(population)!!!!")
-            }
+            var populationChange = population - oldPopulation
+            mayor.notifiyOfPopulationChange(populationChange)
         }
     }
     
@@ -28,6 +27,8 @@ struct Town {
             }
         }
     }
+    
+    var mayor = Mayor()
     
     func printDescription() {
         println("Town has \(population) citizens and \(numberOfStoplights) stop lights.")
