@@ -23,4 +23,4 @@ Swift Book:
 
 iOS Book:
 
-- *Quiz* - chapter 1
+- *quiz_app* - chapter 1
