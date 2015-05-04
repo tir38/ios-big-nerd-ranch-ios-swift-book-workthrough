@@ -24,3 +24,4 @@ Swift Book:
 iOS Book:
 
 - *quiz_app* - chapter 1
+- *hypnosister_app* - chapter 3
