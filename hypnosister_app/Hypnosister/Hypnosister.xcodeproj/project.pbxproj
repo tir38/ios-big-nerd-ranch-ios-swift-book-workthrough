@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		969E07F31AF7CE40002EDB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E07F21AF7CE40002EDB8D /* AppDelegate.swift */; };
-		969E07F51AF7CE40002EDB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E07F41AF7CE40002EDB8D /* ViewController.swift */; };
-		969E07F81AF7CE40002EDB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969E07F61AF7CE40002EDB8D /* Main.storyboard */; };
 		969E07FA1AF7CE40002EDB8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969E07F91AF7CE40002EDB8D /* Images.xcassets */; };
 		969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */; };
 		969E08091AF7CE40002EDB8D /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */; };
+		969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +28,12 @@
 		969E07ED1AF7CE40002EDB8D /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E07F11AF7CE40002EDB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969E07F21AF7CE40002EDB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		969E07F41AF7CE40002EDB8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		969E07F71AF7CE40002EDB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		969E07F91AF7CE40002EDB8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		969E07FC1AF7CE40002EDB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		969E08021AF7CE40002EDB8D /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E08071AF7CE40002EDB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
+		969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnonsisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +75,8 @@
 		969E07EF1AF7CE40002EDB8D /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */,
 				969E07F21AF7CE40002EDB8D /* AppDelegate.swift */,
-				969E07F41AF7CE40002EDB8D /* ViewController.swift */,
-				969E07F61AF7CE40002EDB8D /* Main.storyboard */,
 				969E07F91AF7CE40002EDB8D /* Images.xcassets */,
 				969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */,
 				969E07F01AF7CE40002EDB8D /* Supporting Files */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969E07F81AF7CE40002EDB8D /* Main.storyboard in Resources */,
 				969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */,
 				969E07FA1AF7CE40002EDB8D /* Images.xcassets in Resources */,
 			);
@@ -212,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969E07F51AF7CE40002EDB8D /* ViewController.swift in Sources */,
+				969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */,
 				969E07F31AF7CE40002EDB8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +232,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		969E07F61AF7CE40002EDB8D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				969E07F71AF7CE40002EDB8D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
