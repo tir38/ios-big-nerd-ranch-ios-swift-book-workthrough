@@ -13,6 +13,7 @@
 		969E08091AF7CE40002EDB8D /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */; };
 		969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */; };
 		969E08171AF801AE002EDB8D /* bill_up_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 969E08161AF801AE002EDB8D /* bill_up_close.png */; };
+		969E08191AF80917002EDB8D /* MiniMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08181AF80917002EDB8D /* MiniMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
 		969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnonsisView.swift; sourceTree = "<group>"; };
 		969E08161AF801AE002EDB8D /* bill_up_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bill_up_close.png; path = images/bill_up_close.png; sourceTree = "<group>"; };
+		969E08181AF80917002EDB8D /* MiniMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiniMapView.swift; path = Hypnosister/MiniMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		969E07E41AF7CE40002EDB8D = {
 			isa = PBXGroup;
 			children = (
+				969E08181AF80917002EDB8D /* MiniMapView.swift */,
 				969E07EF1AF7CE40002EDB8D /* Hypnosister */,
 				969E08051AF7CE40002EDB8D /* HypnosisterTests */,
 				969E07EE1AF7CE40002EDB8D /* Products */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969E08191AF80917002EDB8D /* MiniMapView.swift in Sources */,
 				969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */,
 				969E07F31AF7CE40002EDB8D /* AppDelegate.swift in Sources */,
 			);
@@ -401,6 +405,7 @@
 				969E080E1AF7CE40002EDB8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		969E080F1AF7CE40002EDB8D /* Build configuration list for PBXNativeTarget "HypnosisterTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				969E08111AF7CE40002EDB8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

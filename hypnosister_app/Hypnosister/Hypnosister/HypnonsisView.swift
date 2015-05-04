@@ -86,7 +86,12 @@ class HypnonsisView: UIView {
             path.lineWidth = circleLineThickness
             
             let currentColor = colors[currentIndex]
-            currentColor.setStroke()
+            
+            var alpha = ((radius) / (maxRadius/2))
+            if alpha > 1 {
+                alpha = 1
+            }
+            currentColor.colorWithAlphaComponent(alpha).setStroke()
             path.stroke()
             
             // update index
