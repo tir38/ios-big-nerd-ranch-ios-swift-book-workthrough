@@ -9,37 +9,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
     var hypnosisView: HypnonsisView?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        var screenRect = window!.bounds
-        var bigRect = screenRect
-        bigRect.size.height *= 2
-        bigRect.size.width *= 2
+        // setup notification
+        let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
+        application.registerUserNotificationSettings(settings)
         
-        // create screen-sized scroll view
-        let scrollView = UIScrollView(frame: screenRect)
-        window?.addSubview(scrollView)
+        let hypnosisViewController = HypnosisViewController()
+        let reminderViewController = ReminderViewController()
         
-        // create extra large hypno-view
-        let hypnosisView =  HypnonsisView(frame: bigRect)
-        self.hypnosisView = hypnosisView
-        scrollView.addSubview(hypnosisView)
+        // create tabbar controller and add our two view controllers
+        let tabController = UITabBarController()
+        tabController.viewControllers = [hypnosisViewController,
+            reminderViewController]
         
-        // tell scroll view how big its content area is
-        scrollView.contentSize = bigRect.size
-        
-        // set scrollview's delegate
-        scrollView.delegate = self
-        
-        // setup zooming
-        scrollView.minimumZoomScale = 1.0
-        scrollView.maximumZoomScale = 2.0
-        
-        // create minimap
-        let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
-        window?.addSubview(miniMap)
-        miniMap.updateWithScrollView(scrollView)
-        self.miniMap = miniMap
+        window?.rootViewController = tabController
         
         window!.backgroundColor = UIColor.whiteColor()
         window?.makeKeyAndVisible()

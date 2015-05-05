@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96529BFC1AF920BB00DCD023 /* Hypno.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 96529BFA1AF920BB00DCD023 /* Hypno.imageset */; };
+		96529BFD1AF920BB00DCD023 /* Time.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 96529BFB1AF920BB00DCD023 /* Time.imageset */; };
+		967C4C821AF845B60042D2AF /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967C4C811AF845B60042D2AF /* ReminderViewController.xib */; };
 		969E07F31AF7CE40002EDB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E07F21AF7CE40002EDB8D /* AppDelegate.swift */; };
 		969E07FA1AF7CE40002EDB8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969E07F91AF7CE40002EDB8D /* Images.xcassets */; };
 		969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */; };
@@ -14,6 +17,8 @@
 		969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */; };
 		969E08171AF801AE002EDB8D /* bill_up_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 969E08161AF801AE002EDB8D /* bill_up_close.png */; };
 		969E08191AF80917002EDB8D /* MiniMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E08181AF80917002EDB8D /* MiniMapView.swift */; };
+		969E081B1AF83F94002EDB8D /* HypnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E081A1AF83F94002EDB8D /* HypnosisViewController.swift */; };
+		969E081D1AF8422D002EDB8D /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E081C1AF8422D002EDB8D /* ReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96529BFA1AF920BB00DCD023 /* Hypno.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Hypno.imageset; path = Images.xcassets/Hypno.imageset; sourceTree = "<group>"; };
+		96529BFB1AF920BB00DCD023 /* Time.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Time.imageset; path = Images.xcassets/Time.imageset; sourceTree = "<group>"; };
+		967C4C811AF845B60042D2AF /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
 		969E07ED1AF7CE40002EDB8D /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		969E07F11AF7CE40002EDB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		969E07F21AF7CE40002EDB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +45,9 @@
 		969E08081AF7CE40002EDB8D /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
 		969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnonsisView.swift; sourceTree = "<group>"; };
 		969E08161AF801AE002EDB8D /* bill_up_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bill_up_close.png; path = images/bill_up_close.png; sourceTree = "<group>"; };
-		969E08181AF80917002EDB8D /* MiniMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiniMapView.swift; path = Hypnosister/MiniMapView.swift; sourceTree = "<group>"; };
+		969E08181AF80917002EDB8D /* MiniMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniMapView.swift; sourceTree = "<group>"; };
+		969E081A1AF83F94002EDB8D /* HypnosisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnosisViewController.swift; sourceTree = "<group>"; };
+		969E081C1AF8422D002EDB8D /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +71,6 @@
 		969E07E41AF7CE40002EDB8D = {
 			isa = PBXGroup;
 			children = (
-				969E08181AF80917002EDB8D /* MiniMapView.swift */,
 				969E07EF1AF7CE40002EDB8D /* Hypnosister */,
 				969E08051AF7CE40002EDB8D /* HypnosisterTests */,
 				969E07EE1AF7CE40002EDB8D /* Products */,
@@ -80,10 +89,16 @@
 		969E07EF1AF7CE40002EDB8D /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				969E081A1AF83F94002EDB8D /* HypnosisViewController.swift */,
+				969E081C1AF8422D002EDB8D /* ReminderViewController.swift */,
+				967C4C811AF845B60042D2AF /* ReminderViewController.xib */,
+				969E08181AF80917002EDB8D /* MiniMapView.swift */,
 				969E08161AF801AE002EDB8D /* bill_up_close.png */,
 				969E08121AF7CF9B002EDB8D /* HypnonsisView.swift */,
 				969E07F21AF7CE40002EDB8D /* AppDelegate.swift */,
 				969E07F91AF7CE40002EDB8D /* Images.xcassets */,
+				96529BFA1AF920BB00DCD023 /* Hypno.imageset */,
+				96529BFB1AF920BB00DCD023 /* Time.imageset */,
 				969E07FB1AF7CE40002EDB8D /* LaunchScreen.xib */,
 				969E07F01AF7CE40002EDB8D /* Supporting Files */,
 			);
@@ -195,9 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96529BFC1AF920BB00DCD023 /* Hypno.imageset in Resources */,
+				967C4C821AF845B60042D2AF /* ReminderViewController.xib in Resources */,
 				969E08171AF801AE002EDB8D /* bill_up_close.png in Resources */,
 				969E07FD1AF7CE40002EDB8D /* LaunchScreen.xib in Resources */,
 				969E07FA1AF7CE40002EDB8D /* Images.xcassets in Resources */,
+				96529BFD1AF920BB00DCD023 /* Time.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +235,8 @@
 			files = (
 				969E08191AF80917002EDB8D /* MiniMapView.swift in Sources */,
 				969E08131AF7CF9B002EDB8D /* HypnonsisView.swift in Sources */,
+				969E081D1AF8422D002EDB8D /* ReminderViewController.swift in Sources */,
+				969E081B1AF83F94002EDB8D /* HypnosisViewController.swift in Sources */,
 				969E07F31AF7CE40002EDB8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
