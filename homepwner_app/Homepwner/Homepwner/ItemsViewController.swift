@@ -8,7 +8,7 @@ class ItemsViewController: UITableViewController {
         self.itemStore = itemStore    
         super.init(nibName: nil, bundle: nil)
         
-        for _ in 0...4 {
+        for _ in 0...20 {
             self.itemStore.createItem()
         }
     }
@@ -35,14 +35,17 @@ class ItemsViewController: UITableViewController {
                 
             case 1:
                 return itemStore.numberInexpensiveItems
-                
+
+            case 2:
+                return 1 // one final footer section
+            
             default:
                 fatalError("you don't have a section numbered \(section)")
         }
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2 // we want two sections
+        return 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -57,20 +60,29 @@ class ItemsViewController: UITableViewController {
         switch section {
             case 0:
                 item = itemStore.getExpensiveItem(row)
-                
+                setupCellForItem(item, cell: cell)
+
             case 1:
                 item = itemStore.getInexpensiveItem(row)
-                
+                setupCellForItem(item, cell: cell)
+            
+            case 2:
+                cell.nameLabel.text = "No more items"
+                cell.valueLabel.text = ""
+                cell.serialNumberLabel.text = ""
+            
             default:
                 fatalError("you don't have a section numbered \(section)")
         }
         
+        return cell
+    }
+    
+    private func setupCellForItem(item: Item?, cell: ItemCell) {
         if let item = item {
             cell.nameLabel.text = item.name
             cell.valueLabel.text = "\(item.valueInDollars)"
             cell.serialNumberLabel.text = item.serialNumber
         }
-        
-        return cell
     }
 }
