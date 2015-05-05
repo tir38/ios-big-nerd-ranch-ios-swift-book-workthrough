@@ -20,8 +20,6 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 44
-        
         let nib = UINib(nibName: "ItemCell", bundle: nil)
         // register nib
         tableView.registerNib(nib, forCellReuseIdentifier: ItemCell.ViewIdentifier)
@@ -46,6 +44,14 @@ class ItemsViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section != 2 {
+            return CGFloat(60)
+        }
+        return CGFloat(44)
+
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -79,6 +85,7 @@ class ItemsViewController: UITableViewController {
     }
     
     private func setupCellForItem(item: Item?, cell: ItemCell) {
+        
         if let item = item {
             cell.nameLabel.text = item.name
             cell.valueLabel.text = "\(item.valueInDollars)"
