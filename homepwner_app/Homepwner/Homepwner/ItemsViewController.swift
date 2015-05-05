@@ -28,17 +28,48 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.items.count
+        
+        switch section {
+            case 0:
+                return itemStore.numberExpensiveItems
+                
+            case 1:
+                return itemStore.numberInexpensiveItems
+                
+            default:
+                fatalError("you don't have a section numbered \(section)")
+        }
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2 // we want two sections
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(ItemCell.ViewIdentifier, forIndexPath: indexPath) as! ItemCell
         
-        let item = itemStore.items[indexPath.row]
-        cell.nameLabel.text = item.name
-        cell.valueLabel.text = "\(item.valueInDollars)"
-        cell.serialNumberLabel.text = item.serialNumber
+        let section = indexPath.section
+        let row = indexPath.row
         
+        var item: Item?
+        
+        switch section {
+            case 0:
+                item = itemStore.getExpensiveItem(row)
+                
+            case 1:
+                item = itemStore.getInexpensiveItem(row)
+                
+            default:
+                fatalError("you don't have a section numbered \(section)")
+        }
+        
+        if let item = item {
+            cell.nameLabel.text = item.name
+            cell.valueLabel.text = "\(item.valueInDollars)"
+            cell.serialNumberLabel.text = item.serialNumber
+        }
         
         return cell
     }
