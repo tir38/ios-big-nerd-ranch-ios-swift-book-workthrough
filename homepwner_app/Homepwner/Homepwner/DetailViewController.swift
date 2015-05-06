@@ -5,6 +5,7 @@ class DetailViewController: UIViewController,
                                 UIImagePickerControllerDelegate,
                                 UITextFieldDelegate {
     
+    // MARK: outlets
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var serialNumberField: UITextField!
     @IBOutlet weak var valueInDollarsField: UITextField!
@@ -12,11 +13,12 @@ class DetailViewController: UIViewController,
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var toolbar: UIToolbar!
     
-    
+    // MARK: properties
     private let itemStore: ItemStore
     private var item: Item
     private let imageStore: ImageStore
     
+    // MARK: initializers
     init(item: Item, itemStore: ItemStore, imageStore: ImageStore) {
         self.item = item
         self.itemStore = itemStore
@@ -31,6 +33,7 @@ class DetailViewController: UIViewController,
         fatalError("use init(itemStore:) instead")
     }
     
+    // MARK: view lifecycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -61,6 +64,7 @@ class DetailViewController: UIViewController,
         itemStore.updateItem(item)
     }
     
+    // MARK: actions
     @IBAction func takePicture(sender: AnyObject) {
         
         let imagePicker = UIImagePickerController()
@@ -81,6 +85,7 @@ class DetailViewController: UIViewController,
         view.endEditing(true)
     }
     
+    // MARK: private
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -99,7 +104,6 @@ class DetailViewController: UIViewController,
         // we have to manually disimss modal view controller
         dismissViewControllerAnimated(true, completion: nil)
     }
-
 }
 
 
