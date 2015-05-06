@@ -73,6 +73,7 @@ class DetailViewController: UIViewController,
         }
         
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         presentViewController(imagePicker, animated: true, completion: nil) // we use "present" instead of "show" for modal view controllers
     }
@@ -88,7 +89,7 @@ class DetailViewController: UIViewController,
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         // get image from dictionary
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
         
         // set on image view
         imageView.image = image
