@@ -11,8 +11,9 @@ class DetailViewController: UIViewController,
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var deleteImageButton: UIButton!
     
-    
+
     private let itemStore: ItemStore
     private var item: Item
     private let imageStore: ImageStore
@@ -49,6 +50,8 @@ class DetailViewController: UIViewController,
         
         let image = imageStore.imageForKey(item.itemKey)
         imageView.image = image
+        
+        deleteImageButton.hidden = image == nil
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -80,6 +83,12 @@ class DetailViewController: UIViewController,
     
     @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    @IBAction func deleteImage(sender: AnyObject) {
+        imageView.image = nil
+        imageStore.deleteImageForKey(item.itemKey)
+        deleteImageButton.hidden = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
