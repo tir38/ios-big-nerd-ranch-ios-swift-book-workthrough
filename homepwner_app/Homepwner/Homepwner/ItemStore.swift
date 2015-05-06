@@ -27,7 +27,21 @@ class ItemStore: NSObject {
         items.insert(items.removeAtIndex(fromIndex), atIndex: toIndex)
     }
     
+    func updateItem(item: Item) {
+        // find this item in array
+        if let index = find(items, item) {
+            items[index] = item
+        } else {
+            println("Failed to add item to store: \(item.name)")
+        }
+    }
+    
     private func isWithinBounds(index: Int) -> Bool {
         return index >= 0 && index < items.count
     }
+    
+    
+    
+    
+    
 }

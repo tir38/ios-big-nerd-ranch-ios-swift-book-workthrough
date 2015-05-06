@@ -9,9 +9,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let itemStore = ItemStore()
-        
+
         let itemTableViewController = ItemsViewController(itemStore: itemStore)
-        window?.rootViewController = itemTableViewController
+        
+        let navViewController = UINavigationController(rootViewController: itemTableViewController)
+        window?.rootViewController = navViewController
         
         window?.backgroundColor = UIColor.whiteColor()
         window?.makeKeyAndVisible()

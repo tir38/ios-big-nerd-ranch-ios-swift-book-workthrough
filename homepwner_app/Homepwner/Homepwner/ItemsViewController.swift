@@ -10,6 +10,12 @@ class ItemsViewController: UITableViewController {
     init(itemStore: ItemStore) {
         self.itemStore = itemStore    
         super.init(nibName: nil, bundle: nil)
+        
+        // set nav bar
+        navigationItem.title = "Homepwner"
+        let addItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewItem:")
+        navigationItem.rightBarButtonItem = addItem
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
 
     required init!(coder aDecoder: NSCoder!) {
@@ -24,10 +30,12 @@ class ItemsViewController: UITableViewController {
         // setup tableview's nib
         let nib = UINib(nibName: "ItemCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: ItemCell.ViewIdentifier)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // setup header view
-        NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil)
-        tableView.tableHeaderView = headerView
+        tableView.reloadData()
     }
     
     @IBAction
@@ -43,14 +51,7 @@ class ItemsViewController: UITableViewController {
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Top)
         }
     }
-    
-    @IBAction
-    func toggleEditMode(sender: AnyObject) {
-        setEditing(!editing, animated: true)
-        let title: String = editing ? "Done": "Edit"
-        sender.setTitle(title, forState: .Normal)
-    }
-    
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.items.count
     }
@@ -81,5 +82,15 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // get item from store to hand off
+        let item = itemStore.items[indexPath.row]
+        
+        let detailViewController = DetailViewController(item: item, itemStore: itemStore)
+        
+        // push detailviewcontroller on stack
+        showViewController(detailViewController, sender: self)
+    }
+
 }
