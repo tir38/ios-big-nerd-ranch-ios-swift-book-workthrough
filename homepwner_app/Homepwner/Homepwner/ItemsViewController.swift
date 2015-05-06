@@ -4,13 +4,12 @@ class ItemsViewController: UITableViewController {
 
     private let itemStore: ItemStore
     
+    @IBOutlet
+    private var headerView: UIView!
+    
     init(itemStore: ItemStore) {
         self.itemStore = itemStore    
         super.init(nibName: nil, bundle: nil)
-        
-        for _ in 0...4 {
-            self.itemStore.createItem()
-        }
     }
 
     required init!(coder aDecoder: NSCoder!) {
@@ -22,9 +21,34 @@ class ItemsViewController: UITableViewController {
         
         tableView.rowHeight = 44
         
+        // setup tableview's nib
         let nib = UINib(nibName: "ItemCell", bundle: nil)
-        // register nib
         tableView.registerNib(nib, forCellReuseIdentifier: ItemCell.ViewIdentifier)
+        
+        // setup header view
+        NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil)
+        tableView.tableHeaderView = headerView
+    }
+    
+    @IBAction
+    func addNewItem(sender: AnyObject) {
+        // add new item to item store. first!
+        let newItem = itemStore.createItem()
+        
+        // figure out where that item is in the array
+        if let index = find(itemStore.items, newItem) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            
+            // insert new row at index path
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Top)
+        }
+    }
+    
+    @IBAction
+    func toggleEditMode(sender: AnyObject) {
+        setEditing(!editing, animated: true)
+        let title: String = editing ? "Done": "Edit"
+        sender.setTitle(title, forState: .Normal)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,10 +60,26 @@ class ItemsViewController: UITableViewController {
         
         let item = itemStore.items[indexPath.row]
         cell.nameLabel.text = item.name
-        cell.valueLabel.text = "\(item.valueInDollars)"
+        cell.valueLabel.text = "$ \(item.valueInDollars)"
         cell.serialNumberLabel.text = item.serialNumber
-        
-        
         return cell
     }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        itemStore.moveItem(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // if table view is asking to commit a delete command
+        if editingStyle == .Delete {
+            // update store
+            let item = itemStore.items[indexPath.row]
+            itemStore.removeItem(item)
+            
+            // update data source
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    
 }
