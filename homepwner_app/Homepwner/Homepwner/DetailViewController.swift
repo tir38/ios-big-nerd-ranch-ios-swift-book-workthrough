@@ -17,6 +17,19 @@ class DetailViewController: UIViewController {
         super.init(nibName: "DetailViewController", bundle: nil)
         
         navigationItem.title = item.name
+        
+        // setup toolbar to navigate through fields
+        let inputToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 30))
+        let doneButon = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "enterValueDone:")
+        inputToolbar.items = [doneButon]
+        
+        valueInDollarsField.inputAccessoryView = inputToolbar
+        
+    }
+    
+    @IBAction
+    func enterValueDone(sender: AnyObject) -> Void {
+        view.endEditing(true) // hide keyboard
     }
     
     required init(coder aDecoder: NSCoder) {
