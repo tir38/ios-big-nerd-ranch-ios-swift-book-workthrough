@@ -1,10 +1,6 @@
 import Foundation
 
 class Item: NSObject {
-    var name: String
-    var valueInDollars: Int
-    var serialNumber: String?
-    let dateCreated: NSDate
 
     static let nouns = [
         "Necromancer",
@@ -223,11 +219,18 @@ class Item: NSObject {
         "the Void",
     ]
     
+    var name: String
+    var valueInDollars: Int
+    var serialNumber: String?
+    let dateCreated: NSDate
+    let itemKey: String
+    
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = NSDate()
+        self.itemKey = NSUUID().UUIDString
         
         super.init()
     }

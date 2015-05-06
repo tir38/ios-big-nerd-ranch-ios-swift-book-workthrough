@@ -9,8 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let itemStore = ItemStore()
-
-        let itemTableViewController = ItemsViewController(itemStore: itemStore)
+        let imageStore = ImageStore()
+        
+        let itemTableViewController = ItemsViewController(itemStore: itemStore, imageStore: imageStore)
         
         let navViewController = UINavigationController(rootViewController: itemTableViewController)
         window?.rootViewController = navViewController

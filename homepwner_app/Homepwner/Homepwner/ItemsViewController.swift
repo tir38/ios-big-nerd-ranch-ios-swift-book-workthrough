@@ -3,12 +3,15 @@ import UIKit
 class ItemsViewController: UITableViewController {
 
     private let itemStore: ItemStore
+    private let imageStore: ImageStore
     
     @IBOutlet
     private var headerView: UIView!
     
-    init(itemStore: ItemStore) {
-        self.itemStore = itemStore    
+    init(itemStore: ItemStore, imageStore: ImageStore) {
+        self.itemStore = itemStore
+        self.imageStore = imageStore
+        
         super.init(nibName: nil, bundle: nil)
         
         // set nav bar
@@ -76,6 +79,7 @@ class ItemsViewController: UITableViewController {
             // update store
             let item = itemStore.items[indexPath.row]
             itemStore.removeItem(item)
+            imageStore.deleteImageForKey(item.itemKey)
             
             // update data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -87,7 +91,7 @@ class ItemsViewController: UITableViewController {
         // get item from store to hand off
         let item = itemStore.items[indexPath.row]
         
-        let detailViewController = DetailViewController(item: item, itemStore: itemStore)
+        let detailViewController = DetailViewController(item: item, itemStore: itemStore, imageStore: imageStore)
         
         // push detailviewcontroller on stack
         showViewController(detailViewController, sender: self)
