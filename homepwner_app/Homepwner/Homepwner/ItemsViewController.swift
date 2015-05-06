@@ -81,5 +81,7 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    
+    override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
+        return "Remove"
+    }
 }
