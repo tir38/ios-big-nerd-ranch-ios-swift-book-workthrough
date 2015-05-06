@@ -4,7 +4,7 @@ class Item: NSObject {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
-    let dateCreated: NSDate
+    var dateCreated: NSDate
 
     static let nouns = [
         "Necromancer",

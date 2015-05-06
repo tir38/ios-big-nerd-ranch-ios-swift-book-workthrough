@@ -5,7 +5,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var serialNumberField: UITextField!
     @IBOutlet weak var valueInDollarsField: UITextField!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateButton: UIButton!
     
     private let itemStore: ItemStore
     private var item: Item
@@ -24,12 +24,17 @@ class DetailViewController: UIViewController {
         inputToolbar.items = [doneButon]
         
         valueInDollarsField.inputAccessoryView = inputToolbar
-        
     }
     
     @IBAction
     func enterValueDone(sender: AnyObject) -> Void {
         view.endEditing(true) // hide keyboard
+    }
+    
+    @IBAction
+    func showDatePickerViewController(sender: AnyObject) {
+        let datePickerViewController = DatePickerViewController(item: item, itemStore: itemStore)
+        showViewController(datePickerViewController, sender: self)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -50,7 +55,7 @@ class DetailViewController: UIViewController {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .MediumStyle
         dateFormatter.timeStyle = .NoStyle // Bruce Lee
-        dateLabel.text = dateFormatter.stringFromDate(date)
+        dateButton.setTitle(dateFormatter.stringFromDate(date), forState: .Normal)
     }
     
     override func viewWillDisappear(animated: Bool) {
