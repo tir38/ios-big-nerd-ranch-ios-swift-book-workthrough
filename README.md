@@ -1,3 +1,4 @@
+ll
 #Personal Work Through of the Big Nerd Ranch iOS / Swift Book
 -----
 
@@ -25,7 +26,7 @@ iOS Book:
 
 - *quiz_app* - chapter 1
 - *hypnosister_app* - chapter 3 - 6
-- *homepwner_app* chapters 7 - 11
+- *homepwner_app* chapters 7 - 11, 16
 
 
 (*see other repo branches for some challenges*)
