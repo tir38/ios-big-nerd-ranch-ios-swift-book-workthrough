@@ -1,4 +1,3 @@
-ll
 #Personal Work Through of the Big Nerd Ranch iOS / Swift Book
 -----
 
