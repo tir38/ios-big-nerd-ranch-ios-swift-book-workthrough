@@ -1,12 +1,12 @@
 
 /* Class = "UILabel"; text = "Serial"; ObjectID = "XFE-qr-7x4"; */
-"XFE-qr-7x4.text" = "Serial";
+"XFE-qr-7x4.text" = "Numéro de série";
 
 /* Class = "UILabel"; text = "Value ($)"; ObjectID = "crr-Rc-atb"; */
-"crr-Rc-atb.text" = "Value";
+"crr-Rc-atb.text" = "La valeur";
 
 /* Class = "UILabel"; text = "date"; ObjectID = "etY-eV-fnQ"; */
 "etY-eV-fnQ.text" = "date";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "r5k-kS-Uhs"; */
-"r5k-kS-Uhs.text" = "Name";
+"r5k-kS-Uhs.text" = "Nom";
