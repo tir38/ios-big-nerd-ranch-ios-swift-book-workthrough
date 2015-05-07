@@ -1,12 +1,32 @@
 
-import UIKit
+import Foundation
+
 
 class ItemStore: NSObject {
  
+    private static let ItemArchiveKey = "items.archive"
+    
+    // MARK: public properties
     var items: [Item] = []
+
+    // MARK: private properties
+    private let itemArchiveUrl: NSURL = {return UrlHelper.urlForKey(ItemStore.ItemArchiveKey)}()
+    
+    // MARK: init methods
+    
+    override init() {
+        super.init()
+
+        // repopulate from archive
+        if let archivedItems = NSKeyedUnarchiver.unarchiveObjectWithFile(itemArchiveUrl.path!) as? [Item] {
+            items += archivedItems
+        }
+    }
+    
+    // MARK: public methods
     
     func createItem() -> Item {
-        let newItem = Item(random: true)
+        let newItem = Item(random: false)
         items.append(newItem)
         return newItem
     }
@@ -36,12 +56,14 @@ class ItemStore: NSObject {
         }
     }
     
+    func saveChanges() -> Bool {
+        println("saving items to: \(itemArchiveUrl.path)")
+        return NSKeyedArchiver.archiveRootObject(items, toFile: itemArchiveUrl.path!)
+    }
+    
+    // MARK: private methods
+    
     private func isWithinBounds(index: Int) -> Bool {
         return index >= 0 && index < items.count
     }
-    
-    
-    
-    
-    
 }

@@ -219,6 +219,12 @@ class Item: NSObject {
         "the Void",
     ]
     
+    private static let NameKey = "name"
+    private static let DateKey = "date"
+    private static let ItemKeyKey = "itemKey"
+    private static let SerialNumberKey = "serialNumber"
+    private static let ValueInDollarsKey = "valueInDollars"
+    
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
@@ -250,5 +256,28 @@ class Item: NSObject {
             else {
             self.init(name: "Item", serialNumber: "", valueInDollars: 0)
         }
+    }
+    
+    // MARK: NSCoding implementation
+    func encodeWithCoder(aCoder: NSCoder){
+        aCoder.encodeObject(name, forKey: Item.NameKey)
+        aCoder.encodeObject(dateCreated, forKey: Item.DateKey)
+        aCoder.encodeObject(itemKey, forKey: Item.ItemKeyKey)
+        
+        if let serialNumber = serialNumber {
+            aCoder.encodeObject(serialNumber, forKey: Item.SerialNumberKey)
+        }
+        
+        aCoder.encodeInteger(valueInDollars, forKey: Item.ValueInDollarsKey)
+    }
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey(Item.NameKey) as! String
+        dateCreated = aDecoder.decodeObjectForKey(Item.DateKey) as! NSDate
+        itemKey = aDecoder.decodeObjectForKey(Item.ItemKeyKey) as! String
+        serialNumber = aDecoder.decodeObjectForKey(Item.SerialNumberKey) as! String?
+        
+        valueInDollars = aDecoder.decodeIntegerForKey(Item.ValueInDollarsKey)
+        
+        super.init()
     }
 }

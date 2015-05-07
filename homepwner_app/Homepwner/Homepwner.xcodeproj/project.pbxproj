@@ -18,6 +18,7 @@
 		9618E4371AF969A9002AFADD /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9618E4361AF969A9002AFADD /* ItemCell.xib */; };
 		96277CE11AF9BB1D002A31B8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96277CDF1AF9BB1D002A31B8 /* DetailViewController.swift */; };
 		96277CE21AF9BB1D002A31B8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96277CE01AF9BB1D002A31B8 /* DetailViewController.xib */; };
+		963B7D381AFAECA100655991 /* UrlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963B7D371AFAECA100655991 /* UrlHelper.swift */; };
 		969C67DC1AFA9DEA00EC7394 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C67DB1AFA9DEA00EC7394 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		9618E4361AF969A9002AFADD /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		96277CDF1AF9BB1D002A31B8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		96277CE01AF9BB1D002A31B8 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		963B7D371AFAECA100655991 /* UrlHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlHelper.swift; sourceTree = "<group>"; };
 		969C67DB1AFA9DEA00EC7394 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				9618E4301AF955E7002AFADD /* ItemsViewController.swift */,
 				9618E4341AF96987002AFADD /* ItemCell.swift */,
 				9618E4361AF969A9002AFADD /* ItemCell.xib */,
+				963B7D371AFAECA100655991 /* UrlHelper.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				9618E4331AF958C4002AFADD /* ItemStore.swift in Sources */,
 				96277CE11AF9BB1D002A31B8 /* DetailViewController.swift in Sources */,
 				9618E42D1AF955BE002AFADD /* Item.swift in Sources */,
+				963B7D381AFAECA100655991 /* UrlHelper.swift in Sources */,
 				969C67DC1AFA9DEA00EC7394 /* ImageStore.swift in Sources */,
 				9618E4351AF96987002AFADD /* ItemCell.swift in Sources */,
 			);
