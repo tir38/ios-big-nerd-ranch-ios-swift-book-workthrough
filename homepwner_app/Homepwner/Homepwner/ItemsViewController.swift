@@ -8,6 +8,8 @@ class ItemsViewController: UITableViewController {
     @IBOutlet
     private var headerView: UIView!
     
+    // MARK: init
+    
     init(itemStore: ItemStore, imageStore: ImageStore) {
         self.itemStore = itemStore
         self.imageStore = imageStore
@@ -15,7 +17,7 @@ class ItemsViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
         
         // set nav bar
-        navigationItem.title = "Homepwner"
+        navigationItem.title = NSLocalizedString("Homepwner", comment: "Name of application")
         let addItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewItem:")
         navigationItem.rightBarButtonItem = addItem
         navigationItem.leftBarButtonItem = editButtonItem()
@@ -24,6 +26,8 @@ class ItemsViewController: UITableViewController {
     required init!(coder aDecoder: NSCoder!) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: view lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,8 @@ class ItemsViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    // MARK: actions
+    
     @IBAction
     func addNewItem(sender: AnyObject) {
         // add new item to item store. first!
@@ -55,6 +61,8 @@ class ItemsViewController: UITableViewController {
         }
     }
 
+    // MARK: table view methods
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.items.count
     }
@@ -64,7 +72,11 @@ class ItemsViewController: UITableViewController {
         
         let item = itemStore.items[indexPath.row]
         cell.nameLabel.text = item.name
-        cell.valueLabel.text = "$ \(item.valueInDollars)"
+        
+        let currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        cell.valueLabel.text = currencyFormatter.stringFromNumber(item.valueInDollars)
+        
         cell.serialNumberLabel.text = item.serialNumber
         return cell
     }

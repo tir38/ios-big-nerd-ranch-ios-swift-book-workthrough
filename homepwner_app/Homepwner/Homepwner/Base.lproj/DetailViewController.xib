@@ -79,7 +79,7 @@
             <connections>
                 <action selector="backgroundTapped:" destination="-1" eventType="touchUpInside" id="Aes-1R-ASB"/>
             </connections>
-            <point key="canvasLocation" x="511.5" y="390.5"/>
+            <point key="canvasLocation" x="45.5" y="-23.5"/>
         </view>
     </objects>
 </document>
