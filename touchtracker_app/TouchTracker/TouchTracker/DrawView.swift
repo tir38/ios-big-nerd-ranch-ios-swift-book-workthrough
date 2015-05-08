@@ -132,6 +132,10 @@ class DrawView: UIView {
                 line.begin.y += translation.y
                 line.end.x += translation.x
                 line.end.y += translation.y
+                
+                gestureRecognizer.setTranslation(CGPointZero, inView: self)
+                
+                selectedLine = line // NOT IN BOOK
                 // Redraw the screen
                 setNeedsDisplay()
             }
@@ -170,7 +174,6 @@ class DrawView: UIView {
             UIColor.greenColor().setStroke()
             strokeLine(line)
         }
-    
     }
     
     override func prepareForInterfaceBuilder() {

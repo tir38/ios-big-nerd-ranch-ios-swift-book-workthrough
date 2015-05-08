@@ -2,9 +2,14 @@
 import Foundation
 import CoreGraphics
 
-struct Line: Equatable {
+class Line: Equatable {
     var begin: CGPoint = CGPointZero
-    var end: CGPoint = CGPointZero   
+    var end: CGPoint = CGPointZero
+    
+    init(begin: CGPoint, end: CGPoint) {
+        self.begin = begin
+        self.end = end
+    }
 }
 
 func == (lhs: Line, rhs: Line) -> Bool {
